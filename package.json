@@ -1,0 +1,22 @@
+{
+  "name": "nodeexpressweb",
+  "version": "1.0.0",
+  "description": "penggunaan node dan express ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irvanbelajarit/nodejs_express.git"
+  },
+  "author": "Irvan Lewenusa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/irvanbelajarit/nodejs_express/issues"
+  },
+  "homepage": "https://github.com/irvanbelajarit/nodejs_express#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
