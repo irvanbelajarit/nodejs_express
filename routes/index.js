@@ -12,14 +12,14 @@ module.exports = (params) => {
 
     // response.sendFile(path.join(__dirname, './static/index.html'));
 
-    if (!request.session.visitcount) {
-      request.session.visitcount = 0;
-    }
+    // if (!request.session.visitcount) {
+    //   request.session.visitcount = 0;
+    // }
 
-    request.session.visitcount += 1;
-    console.log(`Jumlah yang Visit : ${request.session.visitcount}`);
+    // request.session.visitcount += 1;
+    // console.log(`Jumlah yang Visit : ${request.session.visitcount}`);
 
-    response.render('pages/index', { pageTitle: 'web programming' });
+    response.render('layout', { pageTitle: 'web programming', template: 'index' });
   });
 
   router.use('/materikuliah', materiKuliahRoute());

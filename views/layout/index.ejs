@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Rubik:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+
+    <link rel="stylesheet" href="style.css">
+    <title> <%= pageTitle %></title>
+  </head>
+  <body data-spy="scroll" data-target="#navScroll">
+      <!-- nav -->
+    <nav class="navbar bg-primary navbar-dark navbar-expand-md fixed-top" >
+        <a href="#" class="navbar-brand"> <i class="fas fa-graduation-cap" aria-hidden="true"></i> Irvan </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation" >
+            <span class="navbar-toggler-icon" ></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav" id="navScroll">
+                <li class="nav-item">
+                    <a href="#section-top" class="nav-link">Kembali Ke Atas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#section-fullstack" class="nav-link">Apa itu Fullstack</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#section-Video" class="nav-link">Video</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#section-Showcase" class="nav-link">Showcase</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#section-Latihan" class="nav-link">Latihan</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#section-Harga" class="nav-link">Harga</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#section-Review" class="nav-link">Review</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#section-Newsletter" class="nav-link">Newsletter</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+<!-- end nav -->
+
+<%- include(`../pages/${template}`) %> 
+
+<!-- footer -->
+<footer class="bg-light">
+    <div class="container py-3 py-sm-5">
+        <div class="row">
+           <div class="col-12 col-sm-6 col-lg-3">
+            <h6>Links</h6>
+            <ul class="list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Cancel Subs</a></li>
+            </ul>
+            </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <h6>Follow Us</h6>
+            <ul class="list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Cancel Subs</a></li>
+            </ul>
+        </div>
+         <div class="col-12 col-sm-6 col-lg-3">
+            <h6>Information</h6>
+            <ul class="list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Cancel Subs</a></li>
+            </ul>
+        </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <h6>Our Location</h6>
+            <address>
+                <strong>Belajar IT</strong><br>
+                Jalan Raya 123 <br>
+                Jakarta, Ind 2020<br>
+                <i class="fas fa-mobile-alt fa-fw" aria-hidden="true" ></i> <span class="sr-only" >Telepon : </span><a href="tel:123123123">123-123-123</a><br>
+                <i class="fas fa-inbox fa-fw" aria-hidden="true"></i> <span class="sr-only" >Email : </span><a href="mailto:irvan@belajar-it.web.id">irvan@belajar-it.web.id</a>
+            </address>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-lg-9">
+
+            <ul class="list-inline">
+                <li class="list-inline-item">&copy;2020 Irvan L</li>
+                <li class="list-inline-item">All Rights Reserved.</li>
+                <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#modal" >Syarat dan Ketentuan</a></li>
+            </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+            <div class="dropdown dropup">
+                <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">Ganti Bahasa</button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a href="#" class="dropdown-item small">English</a>
+                    <a href="#" class="dropdown-item small">Indonesia</a>
+                    <a href="#" class="dropdown-item small">German</a>
+                </div>
+            </div>
+        </div>
+    
+</div>
+</footer>
+<!-- end footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js" integrity="sha512-HYG9E+RmbXS7oy529Nk8byKFw5jqM3R1zzvoV2JnltsIGkK/AhZSzciYCNxDMOXEbYO9w6MJ6SpuYgm5PJPpeQ==" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
