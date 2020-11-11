@@ -4,17 +4,21 @@ const path = require('path');
 
 const app = express();
 
-const port =3000;
+const port = 3000;
 
-app.use(express.static(path.join(__dirname,'./static')));
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, './views'));
 
-app.get('/',(request,response)=>{
+app.use(express.static(path.join(__dirname, './static')));
 
-    // response.send("hello world express");
+app.get('/', (request, response) => {
+  // response.send("hello world express");
 
-    response.sendFile(path.join(__dirname,'./static/index.html'));
+  // response.sendFile(path.join(__dirname, './static/index.html'));
+
+  response.render('pages/index', { pageTitle: 'web programming' });
 });
 
-app.listen(port,()=>{
-    console.log(`express server listening on port ${port}! `)
+app.listen(port, () => {
+  console.log(`express server listening on port ${port}! `);
 });
