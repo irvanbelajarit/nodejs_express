@@ -1,5 +1,8 @@
 const express = require('express');
 
+const materiKuliahRoute = require('./materikuliah');
+const feedbackRoute = require('./feedback');
+
 const router = express.Router();
 
 module.exports = () => {
@@ -10,6 +13,10 @@ module.exports = () => {
 
     response.render('pages/index', { pageTitle: 'web programming' });
   });
+
+  router.use('/materikuliah', materiKuliahRoute());
+  router.use('/feedback', feedbackRoute());
+
   return router;
 };
 
