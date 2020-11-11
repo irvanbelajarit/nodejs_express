@@ -5,7 +5,7 @@ const feedbackRoute = require('./feedback');
 
 const router = express.Router();
 
-module.exports = () => {
+module.exports = (params) => {
   router.get('/', (request, response) => {
     // response.send("hello world express");
 
@@ -15,7 +15,7 @@ module.exports = () => {
   });
 
   router.use('/materikuliah', materiKuliahRoute());
-  router.use('/feedback', feedbackRoute());
+  router.use('/feedback', feedbackRoute(params));
 
   return router;
 };
