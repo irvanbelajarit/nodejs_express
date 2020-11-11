@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/irvanbelajarit/nodejs_express#readme",
   "dependencies": {
+    "cookie-session": "^1.4.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1"
   },
