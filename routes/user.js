@@ -96,6 +96,25 @@ module.exports = () => {
     }
   });
 
+  // update data
+  router.patch('/update/:id', async (req, res) => {
+    const id = req.params.id;
+
+    const update = await UserModel.updateMany(
+      {
+        _id: id,
+      },
+      {
+        $set: req.body,
+      }
+    );
+    try {
+      res.send(update);
+    } catch (err) {
+      res.send(err);
+    }
+  });
+
   return router;
 };
 
