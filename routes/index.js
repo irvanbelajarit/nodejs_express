@@ -2,6 +2,9 @@ const express = require('express');
 
 const materiKuliahRoute = require('./materikuliah');
 const feedbackRoute = require('./feedback');
+
+const userRoutes = require('./user');
+
 const { request } = require('express');
 
 const router = express.Router();
@@ -25,6 +28,7 @@ module.exports = (params) => {
   router.use('/materikuliah', materiKuliahRoute());
   router.use('/feedback', feedbackRoute(params));
 
+ router.use('/user',userRoutes());
   return router;
 };
 
