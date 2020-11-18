@@ -53,7 +53,7 @@ module.exports = () => {
 
     try {
       res.send(user);
-    } catch {
+    } catch (err) {
       res.send(err);
     }
   });
@@ -65,7 +65,7 @@ module.exports = () => {
 
     try {
       res.send(user);
-    } catch {
+    } catch (err) {
       res.send(err);
     }
   });
@@ -77,7 +77,21 @@ module.exports = () => {
 
     try {
       res.send(user);
-    } catch {
+    } catch (err) {
+      res.send(err);
+    }
+  });
+
+  // delete
+  router.delete('/del/:id', async (req, res) => {
+    const id = req.params.id;
+
+    const deleteUser = await UserModel.deleteMany({
+      _id: id,
+    });
+    try {
+      res.send(deleteUser);
+    } catch (err) {
       res.send(err);
     }
   });
