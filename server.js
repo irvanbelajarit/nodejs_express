@@ -1,5 +1,7 @@
 const express = require('express');
 
+const mongoose = require('mongoose');
+
 const path = require('path');
 const cookieSession = require('cookie-session');
 
@@ -36,4 +38,13 @@ app.use(
 
 app.listen(port, () => {
   console.log(`express server listening on port ${port}! `);
+});
+
+mongoose.connect(
+  "mongodb://127.0.0.1:27017/db-untar-cafe",{useNewUrlParser:true,useUnifiedTopology:true}
+);
+const db = mongoose.connection;
+
+db.once("open",()=>{
+  console.log("sukses koneksi database menggunakan mongoose");
 });
