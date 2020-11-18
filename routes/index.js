@@ -9,6 +9,8 @@ const { request } = require('express');
 
 const router = express.Router();
 
+router.use(express.json());
+
 module.exports = (params) => {
   router.get('/', (request, response) => {
     // response.send("hello world express");
@@ -28,7 +30,7 @@ module.exports = (params) => {
   router.use('/materikuliah', materiKuliahRoute());
   router.use('/feedback', feedbackRoute(params));
 
- router.use('/user',userRoutes());
+  router.use('/user', userRoutes());
   return router;
 };
 
