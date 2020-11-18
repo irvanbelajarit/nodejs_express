@@ -45,6 +45,43 @@ module.exports = () => {
     }
   });
 
+  router.get('/:id', async (req, res) => {
+    // res.send(req.params.id);
+    const id = req.params.id;
+
+    const user = await UserModel.findById(id);
+
+    try {
+      res.send(user);
+    } catch {
+      res.send(err);
+    }
+  });
+
+  router.get('/name/:name', async (req, res) => {
+    const name = req.params.name;
+
+    const user = await UserModel.find({ name: name });
+
+    try {
+      res.send(user);
+    } catch {
+      res.send(err);
+    }
+  });
+
+  router.get('/email/:email', async (req, res) => {
+    const email = req.params.email;
+
+    const user = await UserModel.where('email').equals(email);
+
+    try {
+      res.send(user);
+    } catch {
+      res.send(err);
+    }
+  });
+
   return router;
 };
 
