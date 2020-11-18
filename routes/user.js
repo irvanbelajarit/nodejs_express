@@ -35,6 +35,16 @@ module.exports = () => {
     }
   });
 
+  router.get('/all', async (req, res) => {
+    const users = await UserModel.find();
+
+    try {
+      res.send(users);
+    } catch (err) {
+      res.send(err);
+    }
+  });
+
   return router;
 };
 
